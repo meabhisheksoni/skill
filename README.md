@@ -1,172 +1,205 @@
-# 🛠️ Universal Refactor Skill Suite
-### *Forensic Architectural Refactoring & God-Object Decomposition Protocol*
-**Code Review Graph (CRG) Blast Radius × Anti-Fragile Inversion × Scissors-Slice Protocol**
+# 🧠 Anti-Fragile Agent Skills Suite & Refactoring Engine
+### *Autonomous Architectural Planning, Forensic Failure Audits, Inversion Reasoning & Zero-Bloat Execution*
 
-[![Universal](https://img.shields.io/badge/Architecture-Universal%20Multi--Stack-blue.svg)](#-100-universal--multi-stack-compatibility)
-[![Protocol](https://img.shields.io/badge/Protocol-Anti--Fragile%20%2B%20Scissors--Slice-green.svg)](#-the-three-pillars-of-the-skill)
+[![Multi-Agent](https://img.shields.io/badge/Architecture-Autonomous%20Multi--Agent-blue.svg)](#-the-suite-architecture)
+[![Protocol](https://img.shields.io/badge/Protocol-Anti--Fragile%20%2B%20SRE--Grade-green.svg)](#-the-5-core-anti-fragile-skills)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
 
-## 📖 Executive Summary
+## 📖 Overview
 
-The **Universal Refactor Skill** is an enterprise-grade AI agent capability engineered to safely decompose monolithic **"God Objects"** (2,000+ line files) and tangled legacy modules into cohesive, modular architectures.
+This repository provides an enterprise-grade collection of **AI Agent Skills** compatible with **Google Antigravity (AGY)**, **Gemini CLI**, **Claude Code**, **Cursor**, **Windsurf**, and **Codex**.
 
-Standard AI coding tools often perform superficial "vibe slicing"—blindly moving functions between files, which introduces circular dependencies, subtle runtime regressions, state leaks, and memory bloat.
-
-This repository provides a **completely self-contained, context-complete refactoring suite**. Any AI agent (Google Antigravity, Gemini CLI, Claude Code, Cursor, Windsurf, Codex) can read this repository from scratch and immediately execute surgical, zero-regression code refactoring across **any tech stack**.
+Unlike conventional coding agents that operate on naive "happy-path" assumptions and superficial code slicing, these skills enforce **Lead SRE-grade rigor, Inversion Thinking, AST knowledge-graph verification, and automated multi-round adversarial verification**.
 
 ---
 
-## 🏛️ The Three Pillars of the Skill Suite
-
-This repository contains three tightly integrated skills located in the [`skills/`](./skills/) directory:
+## 🗂️ Repository Directory Structure
 
 ```text
 skills/
-├── refactor/            # The Master Orchestrator (CRG + Anti-Fragile + Scissors-Slice)
+├── anti-fragile-think/       # 🧠 Deep Inversion Reasoning & Multi-Order Systems Thinking
 │   └── SKILL.md
-├── anti-fragile-think/  # Lead SRE Cognitive Persona & Failure-Obsessed Inversion Protocol
+├── anti-fragile-planning/    # 📐 SRE Pre-Mortem First Implementation Blueprinting
 │   └── SKILL.md
-└── scissors-slice/      # Surgical Submodule Creation & Safety Backup Protocol
-    └── SKILL.md
+├── anti-fragile-audit/       # 🔍 Forensic Architectural Audit & Stress-Testing
+│   └── SKILL.md
+├── auto-hardened-plan/       # 🤖 Autonomous End-to-End Planning & 5-Round Adversarial Hardening Loop
+│   └── SKILL.md
+├── multi-phase-audit/        # 🌪️ Autonomous 5-Round Sequential Fresh-Eyes Forensic Audit Swarm
+│   └── SKILL.md
+├── refactor/                 # 🛠️ Master God-Object Decomposition (CRG + Anti-Fragile + Scissors-Slice)
+│   └── SKILL.md
+├── scissors-slice/           # ✂️ Surgical Submodule Isolation & Safety Backup Gates
+│   └── SKILL.md
+└── zero-bloat-cloud/         # 🛡️ Ephemeral Disk Conservation & Cloud Shell Protection
+    ├── SKILL.md
+    ├── references/
+    └── scripts/
 ```
 
 ---
 
-### Pillar 1: The Anti-Fragile Thinking Protocol (`anti-fragile-think`)
+## 🌟 The 5 Core Anti-Fragile Skills (Detailed Guide)
+
+Neeche har ek skill ka detailed brief description diya gaya hai — **yeh kab trigger karni hai (When to use)** aur **kis practical case me kaam aati hai (Use Cases & Scenarios)**:
+
+---
+
+### 1. `anti-fragile-think` — Inversion Systems Thinking & Multi-Order Reasoning
 > *"If this system can fail, it eventually will — quietly, slowly, and expensively."*
 
-Before modifying a single line of code, the agent must abandon the naive "happy path" and assume the persona of a **Lead SRE and Forensic Inversion Analyst**.
+* **Directory:** [`skills/anti-fragile-think/`](./skills/anti-fragile-think/SKILL.md)
+* **Persona:** Lead System Reliability Engineer (SRE), Principal Systems Philosopher & Forensic Inversion Analyst.
 
-#### 1. The Inversion Directive (Design Away From Catastrophe)
-* **The 1-Year Post-Mortem:** Mentally simulate that it is 12 months in the future. The project crashed, the database is corrupt, users are furious, and the architecture failed. What was the exact root cause of this autopsy?
-* **Technically Correct vs. Practically Toxic:** How can this refactored code pass 100% of unit tests and compiler checks while actively destroying the end-user experience (e.g., hidden micro-stutters, UI thread blocking, cache stampedes)?
-* **The Scale Inversion:** What looks elegant at 10 items/users but creates quadratic ($O(N^2)$) event-loop deadlocks or connection starvation at 10,000?
-* **Nuke over Poison:** Where is partial execution or fallback graceful degradation worse than immediate, loud termination?
+#### 🎯 Kab use karein (Trigger):
+- Slash commands: `/think`, `/anti-fragile-think`, `/reason`
+- Jab bhi kisi new concept, system design, architectural pivot, ya complex feature decision ko deeply evaluate karna ho.
 
-#### 2. The 2nd & 3rd-Order Reasoning Engine ("And Then What?" Recursion)
-```text
-[1st ORDER: Direct Action] ────────► What immediately happens? (e.g. Extracting state to a shared struct)
-        │
-        ▼
-[2nd ORDER: Adaptive Response] ────► How do other modules react? (e.g. Callers now acquire mutexes concurrently)
-        │
-        ▼
-[3rd ORDER: Emergent Feedback] ────► What long-term chaos emerges? (e.g. Deadlocks under high event frequency)
-```
-
-#### 3. Chesterton's Fence & Hidden Load-Bearing Nuance
-* **The Iron Rule:** Never delete, move, or simplify awkward, complex, or verbose logic without first proving why it was put there in the first place.
-* **Refactoring Principle:** Clumsy-looking code often represents historical scar tissue guarding against obscure OS bugs, window-manager quirks, or race conditions. If you cannot explain the scar, you are not allowed to cut it.
+#### 💡 Kis case me use aati hai (Use Cases):
+1. **1-Year Post-Mortem Simulation:** Mental simulation karna ki 12 mahine baad project crash ho chuka hai aur state corrupt ho gayi hai — uska exact autopsy root-cause kya tha?
+2. **2nd & 3rd-Order Chain Reaction Analysis ("And Then What?"):**
+   - *1st-Order:* Novice solution (e.g. In-memory cache lagane se reads 10x fast ho gaye).
+   - *2nd-Order:* Downstream adaptive impact (e.g. Clients ne polling flood shuru kar di, memory exhaust hui aur cache invalidation race conditions 100x badh gaye).
+   - *3rd-Order:* Structural feedback loops (e.g. System crash aur out-of-order data corruption).
+3. **Chesterton's Fence Preservation:** Monolithic ya legacy code me kisi awkward/clumsy looking logic ko bina uski historical zaroorat (historical scar tissue / OS quirks) samjhe delete ya modify hone se rokna.
 
 ---
 
-### Pillar 2: The Scissors-Slice Protocol (`scissors-slice`)
-The mechanical execution of the refactoring follows strict surgical isolation stages:
+### 2. `anti-fragile-planning` — Pre-Mortem First Implementation Planner
+> *"We do not design systems hoping they succeed; we design systems so they cannot fail silently when catastrophe strikes."*
 
-1. **Responsibility & Import Analysis:** Maps every function, state variable, and event loop into clean single-responsibility domains (UI/Presentation, State/Coordination, I/O/Platform, Schemas).
-2. **Mandatory Safety Backup:** Creates a physical copy in `backups/<file>.original.<ext>` before any edits occur.
-3. **Silent Submodule Creation:** Creates the new modular files in a clean directory **without touching the original monolith**.
-4. **Interactive User Approval Gate:** The agent HALTS and presents the full architectural diff, module graph, and proposed coordinator to the user for explicit confirmation before touching the main file.
-5. **Coordinator Rewiring:** Only after explicit approval, the monolith is refactored into a clean coordinator (< 400 lines) that delegates to the new submodules while preserving 100% API backwards compatibility.
+* **Directory:** [`skills/anti-fragile-planning/`](./skills/anti-fragile-planning/SKILL.md)
+* **Persona:** Lead SRE, Principal Distributed Systems Architect, and Inversion Planner.
 
----
+#### 🎯 Kab use karein (Trigger):
+- Slash commands: `/implement`, `/plan`
+- Jab user kisi naye feature ya major code modification ka comprehensive, step-by-step engineering plan mangta hai.
 
-### Pillar 3: Code Review Graph (CRG) Data Engine
-Structural decisions are grounded in objective AST knowledge graphs via `code-review-graph`:
-* **Knowledge Graph Construction:** `crg build` constructs a multi-language Tree-Sitter AST dependency graph.
-* **Blast Radius Analysis:** `crg impact --file <path>` calculates Fan-In (external callers who depend on this file) and Fan-Out (external systems this file calls).
-* **Hotspot Detection:** `crg large-functions` locates oversized functions and God Objects violating the Single Responsibility Principle.
-* **Architecture Coupling:** `crg architecture` flags high-coupling cross-community edges.
-
----
-
-## ⚡ 5-Phase Master Operational Lifecycle
-
-```text
-┌─────────────────────────────────────────────────────────────────────────────┐
-│ PHASE 1: CRG BLAST RADIUS & AST ANALYSIS                                    │
-│ • Run `crg build` to construct Tree-Sitter AST knowledge graph              │
-│ • Run `crg architecture` & `crg impact` to map external blast radius        │
-│ • Identify oversized functions via `crg large-functions`                    │
-└──────────────────────────────────────┬──────────────────────────────────────┘
-                                       │
-                                       ▼
-┌─────────────────────────────────────────────────────────────────────────────┐
-│ PHASE 2: ANTI-FRAGILE INVERSION & INVARIANT MATRIX                          │
-│ • Run the 1-Year Post-Mortem & 2nd/3rd-Order failure recursion              │
-│ • Inspect Chesterton's Fences before touching complex logic                 │
-│ • Formulate non-negotiable runtime invariant checklist                     │
-└──────────────────────────────────────┬──────────────────────────────────────┘
-                                       │
-                                       ▼
-┌─────────────────────────────────────────────────────────────────────────────┐
-│ PHASE 3: SCISSORS-SLICE SILENT EXTRACTION & BACKUP GATES                    │
-│ • MANDATORY: Create physical backup in `backups/<file>.original.<ext>`      │
-│ • Silently author cohesive submodules in target directory                   │
-│ • ZERO EDITS to the original monolith in this phase                         │
-└──────────────────────────────────────┬──────────────────────────────────────┘
-                                       │
-                                       ▼
-┌─────────────────────────────────────────────────────────────────────────────┐
-│ PHASE 4: INTERACTIVE USER APPROVAL GATE (STOP TOOL EXECUTION)               │
-│ • Present CRG Blast Radius, Extracted Submodules, and Coordinator Blueprint │
-│ • Wait for explicit human confirmation before modifying the monolith       │
-└──────────────────────────────────────┬──────────────────────────────────────┘
-                                       │
-                                       ▼
-┌─────────────────────────────────────────────────────────────────────────────┐
-│ PHASE 5: COORDINATOR REWIRING & STACK-AGNOSTIC VERIFICATION                 │
-│ • Replace monolith with lean coordinator (< 400 lines)                      │
-│ • Execute stack-native build and test verification suite                    │
-│ • Auto-rollback from `backups/` if any invariant fails                      │
-└─────────────────────────────────────────────────────────────────────────────┘
-```
+#### 💡 Kis case me use aati hai (Use Cases):
+1. **Ground-Truth AST Investigation (Zero Guesswork):**
+   - Guesswork kiye bina AST Symbol Caller trees (`CBM`) aur blast radius (`CRG`) compute karke plan banana.
+2. **The 5 Chaos Vectors Defense:**
+   - Har step me handle karna: Network disconnects, mid-flight user cancellations, dirty LLM responses (semantic garbage JSON), process leaks/IPC drops, aur millisecond concurrency collisions.
+3. **Clean Rollbacks & Non-Negotiable Invariants:**
+   - Har implementation phase ke sath physical unit/headless verification checks aur fail hone par automatic rollback mechanism design karna taaki production me poisoned data persist na ho.
 
 ---
 
-## 🌍 100% Universal & Multi-Stack Compatibility
+### 3. `anti-fragile-audit` — Forensic Architectural Audit & Stress-Testing
+> *"You are NOT here to build or validate. You are here to destroy weak thinking before it becomes code."*
 
-The skill is completely language- and framework-agnostic. It works across any Git codebase supported by Tree-Sitter:
+* **Directory:** [`skills/anti-fragile-audit/`](./skills/anti-fragile-audit/SKILL.md)
+* **Persona:** Forensic Failure Analyst & Lead SRE Auditor.
 
-| Tech Stack | AST Dependency Parsing (CRG) | Build & Test Verification Gate |
-| :--- | :--- | :--- |
-| **Rust** | `tree-sitter-rust` | `cargo check && cargo test` |
-| **TypeScript / Node / React** | `tree-sitter-typescript` / `javascript` | `npm run build && npm test` / `tsc --noEmit` |
-| **Python / FastAPI / Django** | `tree-sitter-python` | `pytest && mypy .` |
-| **Go** | `tree-sitter-go` | `go vet ./... && go test ./...` |
-| **Java / Kotlin** | `tree-sitter-java` | `mvn test` / `./gradlew test` |
-| **C / C++** | `tree-sitter-c` / `cpp` | `cmake --build build && ctest` |
+#### 🎯 Kab use karein (Trigger):
+- Slash commands: `/audit`, `/anti-fragile-audit`
+- Jab aapke paas already koi implementation plan, RFC, PR diff ya architectural proposal tayar ho aur use code likhne se pehle ruthlessly stress-test karna ho.
+
+#### 💡 Kis case me use aati hai (Use Cases):
+1. **Single-Pass Forensic Stress-Testing:**
+   - Plan ko validate ya praise karne ke bajaye uske hidden failure modes, edge cases, aur scale bottlenecks ko expose karna.
+2. **Technically Correct vs. Practically Toxic Checks:**
+   - Detect karna ki plan 100% tests pass karne ke bawajood production/real-world me kyu useless ya toxic साबित hoga (e.g., UI freeze, event-loop blocking, memory footprint explosion).
+3. **Phantom Symbol & Hallucination Busting:**
+   - Plan me mention kiye gaye files, methods aur dependencies ko actual physical disk aur AST graph se cross-verify karke hallucinations ko zero karna.
 
 ---
 
-## 🚀 Installation & Agent Activation
+### 4. `auto-hardened-plan` — Autonomous End-to-End Planning & Self-Hardening Pipeline
+> *"Complete Planning Blueprint × 5-Round Sequential Adversarial Flash Loop."*
 
-### 1. In Google Antigravity (AGY) / Gemini CLI
-Clone or copy the skills directly into your Antigravity skills directory:
+* **Directory:** [`skills/auto-hardened-plan/`](./skills/auto-hardened-plan/SKILL.md)
+* **Persona:** Master Autonomous Coordinator & Multi-Agent Hardening Engine.
+
+#### 🎯 Kab use karein (Trigger):
+- Slash commands: `/auto-hardened-plan`, `/auto-harden`, `/goal auto-hardened-plan <Feature/plan.md>`
+- Jab aapko ek hi command me raw requirements se lekar 5-round battle-hardened plan chahiye ho bina kisi manual back-and-forth ke.
+
+#### 💡 Kis case me use aati hai (Use Cases):
+1. **Autonomous High-Stakes Planning:**
+   - User requirement deta hai -> Pipeline pehle `anti-fragile-planning` se v1.0 draft banati hai -> Fir continuously 5 sequential fresh-eyes Flash subagents spawn karke plan ko attack karti hai aur disk par patch karti hai.
+2. **Zero-Memory Adversarial Testing:**
+   - Har round me naya subagent bina purani memory bias ke fresh-eyes se plan ko attack karta hai. Purely theoretical critique reject hota hai; exact line citations aur concrete code diffs patch kiye jaate hain.
+3. **Deterministic Convergence:**
+   - Loop tabhi complete hota hai jab at least 4–5 rounds complete ho chuke hon AUR 0 critical flaws bache hon.
+
+---
+
+### 5. `multi-phase-audit` — Autonomous 5-Round Fresh-Eyes Forensic Audit Swarm
+> *"Universal Stack-Agnostic Engine × 5-Round Sequential Adversarial Gauntlet."*
+
+* **Directory:** [`skills/multi-phase-audit/`](./skills/multi-phase-audit/SKILL.md)
+* **Persona:** Autonomous Multi-Round Forensic Audit Swarm Orchestrator.
+
+#### 🎯 Kab use karein (Trigger):
+- Slash commands: `/multi-phase-audit`, `/deep-audit`
+- Jab aapke paas pehle se koi existing plan ya existing codebase hai aur aap chahte hain ki ek ke baad ek 5 unbiased subagents aakar use deep audit karein.
+
+#### 💡 Kis case me use aati hai (Use Cases):
+1. **Deep Progressive Hardening on Disk:**
+   - **Round 1:** Foundational Inversion & Core Architectural Flaws.
+   - **Round 2:** Temporal Drift, State Races & Secondary Failure Chains.
+   - **Round 3:** User Chaos, Network Instability & Resource Exhaustion.
+   - **Round 4:** Anti-Overengineering (YAGNI & Complexity Pruning).
+   - **Round 5:** Verification & Final Zero-Defect Convergence.
+2. **Eliminating Single-Reviewer Blindspots:**
+   - Ek single reviewer kai subtle timing bugs miss kar deta hai; multi-phase audit 5 alag-alag instances se har bar disk file ko independently evaluate karwata hai.
+
+---
+
+## 🧭 Quick Decision Matrix: Kaunsi Skill Kab Use Karein?
+
+| Aapke Paas Kya Hai? | Aapka Goal Kya Hai? | Recommended Skill | Trigger Command |
+| :--- | :--- | :--- | :--- |
+| **Sirf ek Idea ya Architectural Dilemma** | 1-Year Post-Mortem aur 2nd/3rd-order consequences check karna | `anti-fragile-think` | `/think` ya `/anti-fragile-think` |
+| **New Feature Requirement** | Safe, failure-proof, rollback-ready blueprint banana | `anti-fragile-planning` | `/plan` ya `/implement` |
+| **Ek Proposed Plan ya PR** | Single-pass me plan ke saare hidden failure modes nikalna | `anti-fragile-audit` | `/audit` ya `/anti-fragile-audit` |
+| **Complex Feature (Bina manual effort ke)** | Automated end-to-end plan banakar 5 rounds me harden karna | `auto-hardened-plan` | `/auto-hardened-plan` |
+| **Existing Plan ya Monolith Codebase** | 5 fresh-eyes sequential subagents se deep forensic audit karwana | `multi-phase-audit` | `/multi-phase-audit` ya `/deep-audit` |
+| **Monolithic "God Object" File (1000+ lines)** | Safely modular submodules me divide karna | `refactor` / `scissors-slice` | `/refactor` |
+| **Cloud Shell / Limited Disk Environment** | 4.8 GB limit bacha kar ephemeral `/tmp` me compile/test karna | `zero-bloat-cloud` | Auto-activated in cloud / low disk |
+
+---
+
+## 🛠️ Additional Specialized Skills in the Suite
+
+### `refactor` — God-Object Architectural Decomposition
+* **Directory:** [`skills/refactor/`](./skills/refactor/SKILL.md)
+* **Kab use karein:** `/refactor`
+* **Kis case me use aati hai:** Monolithic "God Objects" (2000+ lines) ko safely single-responsibility submodules me split karne ke liye, using Code Review Graph (CRG) blast radius analysis, Anti-Fragile Invariants, aur Scissors-Slice protocol.
+
+### `scissors-slice` — Surgical Submodule Slicing & Safety Backups
+* **Directory:** [`skills/scissors-slice/`](./skills/scissors-slice/SKILL.md)
+* **Kab use karein:** Jab kisi monolithic file ko bina original code break kiye alag-alag modules me nikalna ho.
+* **Kis case me use aati hai:** Mandatory `backups/` creation, silent extraction without touching the monolith, interactive user approval gate, aur API-compatible coordinator rewiring.
+
+### `zero-bloat-cloud` — Ephemeral Disk & Cloud Shell Conservation
+* **Directory:** [`skills/zero-bloat-cloud/`](./skills/zero-bloat-cloud/SKILL.md)
+* **Kab use karein:** Google Cloud Shell (4.8 GB persistent quota), GitHub Codespaces, Gitpod, Docker devcontainers me.
+* **Kis case me use aati hai:** Heavy build caches (`target/`, `.npm-cache`, `.gradle`) ko `/tmp` partition par redirect karna, headless verification enforce karna, aur disk exhaustion crash (`No space left on device`) ko rokna.
+
+---
+
+## 🚀 Installation & Agent Setup
+
+### 1. Google Antigravity (AGY) / Gemini CLI
+Apne AGY skills directory me clone ya copy karein:
 ```bash
-mkdir -p ~/.gemini/config/skills/refactor
-curl -sL https://raw.githubusercontent.com/meabhisheksoni/skill/main/SKILL.md -o ~/.gemini/config/skills/refactor/SKILL.md
+git clone https://github.com/meabhisheksoni/skill.git ~/.gemini/config/skills/suite
+# Ya individual skill copy karein:
+cp -r ~/.gemini/config/skills/suite/skills/* ~/.gemini/config/skills/
 ```
 
-### 2. In Claude Code
-Install into your custom skills directory:
+### 2. Claude Code
 ```bash
-mkdir -p ~/.claude/skills/refactor
-curl -sL https://raw.githubusercontent.com/meabhisheksoni/skill/main/SKILL.md -o ~/.claude/skills/refactor/SKILL.md
+mkdir -p ~/.claude/skills
+cp -r skills/* ~/.claude/skills/
 ```
 
-### 3. In Cursor / Windsurf
-Add `SKILL.md` to your workspace `.cursor/rules/refactor.mdc` or `.windsurf/rules/refactor.md`.
-
----
-
-## 🛠️ Prerequisites
-For Phase 1 (AST Dependency Graph & Blast Radius analysis), install `code-review-graph`:
-```bash
-pip install --user code-review-graph
-```
+### 3. Cursor / Windsurf
+Apne project workspace ke `.cursor/rules/` ya `.windsurf/rules/` directory me `SKILL.md` add karein.
 
 ---
 
