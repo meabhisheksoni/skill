@@ -27,10 +27,15 @@ skills/
 │   └── SKILL.md
 ├── auto-hardened-plan/       # 🤖 Autonomous End-to-End Planning & 5-Round Adversarial Hardening Loop
 │   └── SKILL.md
+├── loop-feature/             # 🔄 Adaptive 3-Tier Autonomous Feature Development Engine
+│   └── SKILL.md
 ├── multi-phase-audit/        # 🌪️ Autonomous 5-Round Sequential Fresh-Eyes Forensic Audit Swarm
 │   └── SKILL.md
 ├── refactor/                 # 🛠️ Master God-Object Decomposition (CRG + Anti-Fragile + Scissors-Slice)
-│   └── SKILL.md
+│   ├── SKILL.md
+│   ├── SETUP_GUIDE.md
+│   ├── setup-crg.bat
+│   └── scripts/
 ├── scissors-slice/           # ✂️ Surgical Submodule Isolation & Safety Backup Gates
 │   └── SKILL.md
 └── zero-bloat-cloud/         # 🛡️ Ephemeral Disk Conservation & Cloud Shell Protection
@@ -158,12 +163,21 @@ Neeche har ek skill ka detailed brief description diya gaya hai — **yeh kab tr
 | **Ek Proposed Plan ya PR** | Single-pass me plan ke saare hidden failure modes nikalna | `anti-fragile-audit` | `/audit` ya `/anti-fragile-audit` |
 | **Complex Feature (Bina manual effort ke)** | Automated end-to-end plan banakar 5 rounds me harden karna | `auto-hardened-plan` | `/auto-hardened-plan` |
 | **Existing Plan ya Monolith Codebase** | 5 fresh-eyes sequential subagents se deep forensic audit karwana | `multi-phase-audit` | `/multi-phase-audit` ya `/deep-audit` |
+| **New Feature / Refinement (Adaptive)** | Auto scope detection: Tier 1 Surgical, Tier 2 Focused, Tier 3 Hardened DAG | `loop-feature` | `/loop` ya `/loop-feature` |
 | **Monolithic "God Object" File (1000+ lines)** | Safely modular submodules me divide karna | `refactor` / `scissors-slice` | `/refactor` |
 | **Cloud Shell / Limited Disk Environment** | 4.8 GB limit bacha kar ephemeral `/tmp` me compile/test karna | `zero-bloat-cloud` | Auto-activated in cloud / low disk |
 
 ---
 
 ## 🛠️ Additional Specialized Skills in the Suite
+
+### `loop-feature` — Adaptive 3-Tier Autonomous Feature Engine
+* **Directory:** [`skills/loop-feature/`](./skills/loop-feature/SKILL.md)
+* **Kab use karein:** `/loop`, `/loop-feature`, `loop-feature`
+* **Kis case me use aati hai:** Right-sized automation engine jo automatic complexity detect karke 3 gears me execute karta hai:
+  * **Tier 1 (Surgical Fast):** Small edits (color, text, 1-2 lines) me 0 overhead, direct in-place edit in seconds.
+  * **Tier 2 (Focused Feature):** Single component, modal, ya API endpoint ko single-agent linear step-by-step wire karna.
+  * **Tier 3 (Hardened Slices):** Complex cross-cutting architectures (DB + worker + UI) ko full anti-fragile pre-mortem, adversarial audit, aur isolated subagent DAG me execute karna.
 
 ### `refactor` — God-Object Architectural Decomposition & CRG Toolchain
 * **Directory:** [`skills/refactor/`](./skills/refactor/SKILL.md) | **Setup Guide:** [`skills/refactor/SETUP_GUIDE.md`](./skills/refactor/SETUP_GUIDE.md)
