@@ -103,20 +103,28 @@ Run the stack-native compiler and test verification suite. If any invariant is v
 
 ## 🌐 PILLAR 3: THE CODE REVIEW GRAPH (CRG) DATA ENGINE
 
-To prevent blind guessing, all structural decisions are guided by **Code Review Graph (CRG)**:
+To prevent blind guessing and catastrophic ripple effects, all structural decisions are guided by **Code Review Graph (CRG)** (`code-review-graph` / `crg`):
 
-1. **Build Knowledge Graph:**
+> ⛔ **MANDATORY CRG PRE-FLIGHT GATE (NON-NEGOTIABLE):**  
+> Before touching any file, creating backups, or extracting code, you MUST execute CRG commands to map AST dependencies and blast radius.  
+> **If CRG is unavailable, offline, or returns an error, YOU MUST FAIL FAST AND ABORT IMMEDIATELY.**  
+> Print a clear error: `[CRG BLOCKER] Code Review Graph is offline or unreachable. Refactor halted to prevent uncontained blast radius.`  
+> **ZERO SILENT FALLBACK:** You are STRICTLY FORBIDDEN from substituting basic `git grep` or CBM caller searches as a fake blast radius analysis. Refactoring without genuine CRG blast containment is banned.
+
+### CRG Discovery & Commands:
+1. **Build / Verify Knowledge Graph:**
    ```bash
-   crg build
+   crg build --repo .
+   # Or: code-review-graph build --repo .
    ```
 2. **Inspect Architecture & Communities:**
    ```bash
-   crg architecture
+   crg architecture --repo .
    ```
    Identifies high-coupling edges between sub-communities.
 3. **Detect Large / Hotspot Nodes:**
    ```bash
-   crg large-functions
+   crg large-functions --repo .
    ```
    Locates oversized methods and structs violating the Single Responsibility Principle.
 4. **Calculate Blast Radius Before Edits:**
@@ -125,16 +133,59 @@ To prevent blind guessing, all structural decisions are guided by **Code Review 
    ```
    Quantifies Fan-In (external callers who depend on this file) and Fan-Out (external systems this file calls).
 
+### 🔌 ZERO-SETUP MACHINE BOOTSTRAP (FOR ANY NEW PC):
+
+If this skill is invoked on a brand-new PC, CI container, or fresh workspace where `crg` is not yet installed:
+
+1. **Automated 1-Click Bootstrap (Windows):**
+   ```cmd
+   .\setup-crg.bat
+   # Or directly run:
+   powershell.exe -ExecutionPolicy Bypass -File scripts\setup-crg.ps1
+   # Or in sync-graphs.bat: Select Option [8]
+   ```
+   *This automatically installs `uv`, pulls pre-compiled `code-review-graph` wheels, generates `crg.cmd` in `~/.local/bin`, adds it to User PATH, registers Antigravity MCP configs, and verifies graph health.*
+
+2. **Manual Cross-Platform Setup (Linux / macOS / Windows):**
+   ```bash
+   # Step A: Install code-review-graph via uv or pip
+   uv tool install code-review-graph --force
+   # (Fallback: pip install code-review-graph)
+
+   # Step B: Ensure ~/.local/bin is on PATH, then build the repo graph:
+   code-review-graph build --repo .
+   ```
+
+3. **Agent Self-Healing Directive:**
+   When an agent detects that `crg --version` fails on a fresh PC, the agent MUST NOT silently bypass CRG. Instead, the agent must inform the user and execute `setup-crg.bat` (or the `setup-crg.ps1` script), verify `crg status --repo .`, and only then proceed into Phase 1.
+
+---
+
+## 🏗️ PILLAR 4: DEEP ARCHITECTURAL DECOUPLING (BEYOND FILE SLICING)
+
+Refactoring is **NOT merely cutting lines of code into cosmetic submodules**. Slicing a 1000-line file into 4 submodules while passing 25 loose primitive parameters (`onClick1`, `onClick2`, `stateA`, `stateB`) leaves architectural complexity and coupling unchanged.
+
+Every refactor must enforce:
+1. **Recomposition & Prop Containment (State Hoisting):**
+   * Never pass loose chains of 15+ state primitives down through submodule trees.
+   * Bundle screen state into cohesive, immutable `@Immutable` UI State data classes (e.g., `ScreenUiState`) or dedicated State Holder classes.
+2. **Business Logic & Side-Effect Hoisting:**
+   * Presentation submodules must be purely declarative views.
+   * Hoist string parsing, date arithmetic, currency formatting, database mutations, and toast triggers out of Composable functions and into ViewModels or Domain UseCases.
+3. **Coupling Reduction:**
+   * Quantify Fan-In and Fan-Out via CRG before and after the refactor to prove that structural dependencies were eliminated or narrowed.
+
 ---
 
 ## ⚡ 5-PHASE OPERATIONAL WORKFLOW
 
 ```text
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│ PHASE 1: CRG BLAST RADIUS & AST ANALYSIS                                    │
-│ • Run `crg build` to construct Tree-Sitter AST knowledge graph              │
-│ • Run `crg architecture` & `crg impact` to map external blast radius        │
-│ • Identify oversized functions via `crg large-functions`                    │
+│ PHASE 1: CRG BLAST RADIUS & AST ANALYSIS (STRICT PRE-FLIGHT GATE)           │
+│ • Verify CRG presence: `crg --version`. If absent -> ABORT IMMEDIATELY.     │
+│ • Run `crg status --repo .` & `crg impact --file <target_file>`             │
+│ • Map Fan-In, Fan-Out, and affected execution paths via CRG                │
+│ • Enforce: Zero silent fallback to plain grep or CBM caller checks          │
 └──────────────────────────────────────┬──────────────────────────────────────┘
                                        │
                                        ▼
@@ -143,6 +194,7 @@ To prevent blind guessing, all structural decisions are guided by **Code Review 
 │ • Run the 1-Year Post-Mortem & 2nd/3rd-Order failure recursion              │
 │ • Inspect Chesterton's Fences before touching complex logic                 │
 │ • Formulate non-negotiable runtime invariant checklist                     │
+│ • Design state bundling (UI State data classes) & business logic hoisting   │
 └──────────────────────────────────────┬──────────────────────────────────────┘
                                        │
                                        ▼

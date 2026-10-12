@@ -165,10 +165,11 @@ Neeche har ek skill ka detailed brief description diya gaya hai — **yeh kab tr
 
 ## 🛠️ Additional Specialized Skills in the Suite
 
-### `refactor` — God-Object Architectural Decomposition
-* **Directory:** [`skills/refactor/`](./skills/refactor/SKILL.md)
+### `refactor` — God-Object Architectural Decomposition & CRG Toolchain
+* **Directory:** [`skills/refactor/`](./skills/refactor/SKILL.md) | **Setup Guide:** [`skills/refactor/SETUP_GUIDE.md`](./skills/refactor/SETUP_GUIDE.md)
 * **Kab use karein:** `/refactor`
 * **Kis case me use aati hai:** Monolithic "God Objects" (2000+ lines) ko safely single-responsibility submodules me split karne ke liye, using Code Review Graph (CRG) blast radius analysis, Anti-Fragile Invariants, aur Scissors-Slice protocol.
+* **1-Click Machine Bootstrap:** Naye PC par setup karne ke liye `skills/refactor/setup-crg.bat` (Windows) ya `skills/refactor/scripts/setup-crg.sh` (Linux/macOS) included hai jo automatically `uv`, `code-review-graph`, `crg.cmd` aur MCP configuration install karta hai.
 
 ### `scissors-slice` — Surgical Submodule Slicing & Safety Backups
 * **Directory:** [`skills/scissors-slice/`](./skills/scissors-slice/SKILL.md)
