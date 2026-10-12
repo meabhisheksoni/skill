@@ -31,12 +31,16 @@ skills/
 │   └── SKILL.md
 ├── multi-phase-audit/        # 🌪️ Autonomous 5-Round Sequential Fresh-Eyes Forensic Audit Swarm
 │   └── SKILL.md
+├── prompt-enhancer/          # 🪄 Codebase-Grounded English Prompt Architecture & Synthesis
+│   └── SKILL.md
 ├── refactor/                 # 🛠️ Master God-Object Decomposition (CRG + Anti-Fragile + Scissors-Slice)
 │   ├── SKILL.md
 │   ├── SETUP_GUIDE.md
 │   ├── setup-crg.bat
 │   └── scripts/
 ├── scissors-slice/           # ✂️ Surgical Submodule Isolation & Safety Backup Gates
+│   └── SKILL.md
+├── voice-prompt-enhancer/    # 🎙️ Voice & Dictation Typo Cleaner & Question Refiner
 │   └── SKILL.md
 └── zero-bloat-cloud/         # 🛡️ Ephemeral Disk Conservation & Cloud Shell Protection
     ├── SKILL.md
@@ -164,12 +168,24 @@ Neeche har ek skill ka detailed brief description diya gaya hai — **yeh kab tr
 | **Complex Feature (Bina manual effort ke)** | Automated end-to-end plan banakar 5 rounds me harden karna | `auto-hardened-plan` | `/auto-hardened-plan` |
 | **Existing Plan ya Monolith Codebase** | 5 fresh-eyes sequential subagents se deep forensic audit karwana | `multi-phase-audit` | `/multi-phase-audit` ya `/deep-audit` |
 | **New Feature / Refinement (Adaptive)** | Auto scope detection: Tier 1 Surgical, Tier 2 Focused, Tier 3 Hardened DAG | `loop-feature` | `/loop` ya `/loop-feature` |
+| **Raw, Hindi/Hinglish ya Vague Request** | Grounding with CBM AST + flawless English prompt synthesis | `prompt-enhancer` | `/enhance` ya `/prompt-enhancer` |
+| **Messy Voice Chat / Dictated Prompt** | Phonetic auto-correct cleanup + interactive clarification | `voice-prompt-enhancer` | Auto-triggered on voice prompts |
 | **Monolithic "God Object" File (1000+ lines)** | Safely modular submodules me divide karna | `refactor` / `scissors-slice` | `/refactor` |
 | **Cloud Shell / Limited Disk Environment** | 4.8 GB limit bacha kar ephemeral `/tmp` me compile/test karna | `zero-bloat-cloud` | Auto-activated in cloud / low disk |
 
 ---
 
 ## 🛠️ Additional Specialized Skills in the Suite
+
+### `prompt-enhancer` — Codebase-Grounded English Prompt Architect
+* **Directory:** [`skills/prompt-enhancer/`](./skills/prompt-enhancer/SKILL.md)
+* **Kab use karein:** `/enhance`, `/prompt-enhancer`, `prompt-enhancer`
+* **Kis case me use aati hai:** Kisi bhi raw, fragmented, Hindi, Hinglish ya underspecified prompt ko flawless, production-ready, structured English prompt me convert karna using CBM AST symbol grounding (zero hallucinations & zero code edits).
+
+### `voice-prompt-enhancer` — Voice Chat & Dictation Cleaner
+* **Directory:** [`skills/voice-prompt-enhancer/`](./skills/voice-prompt-enhancer/SKILL.md)
+* **Kab use karein:** Voice chat, audio dictation, speech-to-text inputs
+* **Kis case me use aati hai:** Phonetic mistakes, speech auto-correct bugs, aur ambiguous wording ko detect karke interactive multiple-choice clarification lena aur final clean prompt output karna.
 
 ### `loop-feature` — Adaptive 3-Tier Autonomous Feature Engine
 * **Directory:** [`skills/loop-feature/`](./skills/loop-feature/SKILL.md)
